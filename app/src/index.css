@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+.search-table {
+  @apply p-2 bg-transparent placeholder-white text-black focus:placeholder-gray-500 outline-none border-b-2  w-[20%] md:w-[14%] focus:w-[16%] duration-300 border-indigo-100;
+}
+
+.title-table {
+  @apply text-black font-bold text-2xl tracking-wide capitalize m-2 md:ml-10 md:my-10;
+}
+.header-table {
+  @apply w-full bg-white rounded-lg mx-auto mt-8 justify-center flex flex-col;
+}
+.th-table {
+  @apply cursor-pointer bg-gray-400/20 px-2 py-2 md:px-6 md:py-3 text-left text-xs leading-4 font-medium text-black uppercase tracking-wider whitespace-nowrap;
+}
+.td-table {
+  @apply px-2 py-2 md:px-6 md:py-4 text-black whitespace-nowrap;
+}
+
+.tbody-table {
+  @apply bg-white divide-y-[0.5px] divide-gray-500;
+}
+
+.table {
+  @apply w-full rounded-xl divide-y-[1px] divide-gray-500;
+}
+.icon-table {
+  @apply md:w-28 w-24 gap-1 flex flex-row;
+}
+
+.paginate {
+  @apply flex items-center justify-end mt-2 gap-2;
+}
+
+.paginate-arrow {
+  @apply p-1 bg-white px-2 disabled:opacity-30;
+}
+.paginate-text {
+  @apply flex items-center gap-1 text-black;
+}
+.paginate-number {
+  @apply border text-black p-1 rounded w-16 bg-transparent;
+}
+.paginate-change {
+  @apply p-2 bg-white;
+}

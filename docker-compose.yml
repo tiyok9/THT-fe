@@ -1,0 +1,30 @@
+services:
+  appfe:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    container_name: appfe
+    environment:
+      NODE_ENV: production
+    expose:
+      - "4173"
+    ports:
+      - "4173:4173"
+    networks:
+      - thtapi_api_laravel
+
+  nginx-appfe:
+    image: nginx:latest
+    container_name: nginx-appfe
+    ports:
+      - "8686:86"
+    tty: true
+    volumes:
+      - ./nginx/app.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - appfe
+    networks:
+      - thtapi_api_laravel
+networks:
+  thtapi_api_laravel:
+    external: true
